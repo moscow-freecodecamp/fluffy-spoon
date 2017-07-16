@@ -1,9 +1,57 @@
 # fluffy-spoon
 It's just like Tinder, but for programmers 
 
-Copied from https://github.com/patrickbolle/vuejs-boilerplate
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-generate-toc again -->
+**Table of Contents**
+
+- [fluffy-spoon](#fluffy-spoon)
+- [To start](#to-start)
+- [README from vuejs-boilerplate](#readme-from-vuejs-boilerplate)
+    - [Status Update from Owner](#status-update-from-owner)
+        - [-](#-)
+    - [Build Setup](#build-setup)
+        - [Client side](#client-side)
+        - [Server side](#server-side)
+    - [CHANGE LOG](#change-log)
+        - [0.5](#05)
+        - [0.3](#03)
+        - [0.2](#02)
+        - [0.1](#01)
+    - [TODO LIST](#todo-list)
+
+<!-- markdown-toc end -->
+
+# To start
+
+If you're using yarn:
+```bash
+cd fluffy-spoon/client
+yarn
+yarn run dev
+
+cd fluffy-spoon/server
+yarn
+yarn run start
+```
+
+If you're using npm:
+```bash
+cd fluffy-spoon/client
+npm install
+npm run dev
+
+cd fluffy-spoon/server
+npm install
+npm run start
+```
+
+Then open http://localhost:8080/
+
+
  
-# vuejs-boilerplate
+# README from vuejs-boilerplate
+
+Copied from https://github.com/patrickbolle/vuejs-boilerplate
 
 ## Status Update from Owner
 
@@ -82,6 +130,7 @@ npm start
 - Switched to Postgres as database
 - Removed Vue-Auth - will be building my own solution for it.
 - Login + Register works, CRUD works for Todo List items.
+
 ### 0.3
 - Refactored all code to Vue JS 2.0 (with updated vue-webpack template)
 - Switched from Bulma CSS library to Bootstrap 4.0 Alpha (looks great now)
