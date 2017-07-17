@@ -57,10 +57,16 @@ npm install
 npm run start
 ```
 
+If you have [docker](https://www.docker.com/) and [docker](https://docs.docker.com/compose/) installed:
+
+```bash
+export GMAIL_ADDRESS=fluff@gmail.com
+export GMAIL_PASSWORD=my_precious
+docker-compose up # try "docker-compose up -d" to start a background process
+```
+
 Then open http://localhost:8080/
 
-
- 
 # README from vuejs-boilerplate
 
 Copied from https://github.com/patrickbolle/vuejs-boilerplate
