@@ -1,0 +1,33 @@
+version: '3.3'
+
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: fluff
+    volumes:
+      - ./server/sql:/docker-entrypoint-initdb.d
+
+  server:
+    image: node
+    volumes:
+      - ./server:/src
+    ports:
+      - 3000:3000
+    links:
+      - db
+    environment:
+      DATABASE_URL: 'postgres://postgres:fluff@db/postgres'
+      email: "${GMAIL_ADDRESS}"
+      password: "${GMAIL_PASSWORD}"
+    working_dir: /src
+    command: ["sh", "-c", "npm install && npm start"]
+
+  client:
+    image: node
+    volumes:
+      - ./client:/src
+    ports:
+      - 8080:8080
+    working_dir: /src
+    command: ["sh", "-c", "npm install && npm run dev"]
