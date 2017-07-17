@@ -57,7 +57,7 @@ npm install
 npm run start
 ```
 
-If you have [docker](https://www.docker.com/) and [docker](https://docs.docker.com/compose/) installed:
+If you have [docker](https://www.docker.com/) and [docker-compose](https://docs.docker.com/compose/) installed:
 
 ```bash
 export GMAIL_ADDRESS=fluff@gmail.com
