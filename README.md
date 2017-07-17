@@ -21,6 +21,18 @@ It's just like Tinder, but for programmers
 
 <!-- markdown-toc end -->
 
+# Prerequisites
+
+* Have a recent version of [PostgreSQL](https://www.postgresql.org/) installed
+* Expose the connection parameters via environment variable [DATABASE_URL](https://devcenter.heroku.com/changelog-items/438)
+
+At this moment we are using gmail to send email on registration. To try this feature you need to provide some valid gmail credentials via environment variables `email` and `password`:
+
+```bash
+export email=fluff@gmail.com
+export password=my_precious
+```
+
 # To start
 
 If you're using yarn:
