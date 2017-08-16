@@ -2,7 +2,7 @@
 It's just like Tinder, but for programmers.
 
 ## Getting Started
-We use MERN stack for developing this project. Join our slack for communications: moscow-freecodecamp.slack.com and join our facebook group for meetups: facebook.com/groups/free.code.camp.moscow
+We use MERN stack for developing this project. Join our slack for communications: https://moscow-freecodecamp.slack.com and join our https://facebook group for meetups: facebook.com/groups/free.code.camp.moscow
 
 ### Prerequisites
 1. Install mongodb: mongodb.com/download-center
