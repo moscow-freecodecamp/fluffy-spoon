@@ -1,3 +1,10 @@
+// const test = require('ava');
+// const mongoose = require('mongoose');
+// const mockgoose = require('mockgoose');
+//
+// test.before(() => mockgoose(mongoose));
+// test.afterEach(() => mockgoose.reset());
+
 // To get normal classnames instead of CSS Modules classnames for testing
 require('mock-css-modules');
 
