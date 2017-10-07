@@ -19,8 +19,8 @@ export const listUsers = async (req, res) => {
     const items = users.map(user => ({
       id: user._id.toString(),
       name: user.name,
-      interests: user.interests,
-      location: user.location,
+      skills: user.skills,
+      city: user.city,
     }));
 
     res.json({ total, items });
