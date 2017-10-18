@@ -23,8 +23,8 @@ test.serial('returns a list of users', async t => {
     name: 'John Smith',
     email: 'j.smith@example.org',
     passwordHash: 'foo',
-    interests: ['javascript', 'php'],
-    location: 'Moscow',
+    skills: ['javascript', 'php'],
+    city: 'Moscow',
   });
 
   const response = await request(app)
@@ -37,8 +37,8 @@ test.serial('returns a list of users', async t => {
       {
         id: user._id.toString(),
         name: 'John Smith',
-        interests: ['javascript', 'php'],
-        location: 'Moscow',
+        skills: ['javascript', 'php'],
+        city: 'Moscow',
       },
     ],
   });
@@ -63,39 +63,3 @@ test.serial('it allows to retrieve only a segment of all users', async t => {
   t.is(response.body.items[0].name, 'Tom York');
   t.is(response.body.items.length, 3);
 });
-//
-// describe('GET /users', () => {
-//   descirbe('it allows to limit the number of returned items', () => {
-//     beforeEach(() => {
-//       return factory.createMany('User', 5);
-//     });
-//
-//     beforeEach(async () => {
-//       response = await request('/users?limit=2');
-//     });
-//
-//     it('returns the total number of items', () => {
-//       expect(response.total).toBe(5);
-//     });
-//
-//     it('returns the limited number of items', () => {
-//       expect(response.items.length).toBe(2);
-//     });
-//   });
-//
-//   describe('it allows to specify offset', () => {
-//     beforeEach(() => {
-//       return factory.createMany('User', 5, {
-//         id: factory.sequence(),
-//       });
-//     });
-//
-//     beforeEach(async () => {
-//       response = await request('/users?offset=2');
-//     });
-//
-//     it('returns items after the given offset', () => {
-//       expect(response.items).toMatchObject([{ id: 2 }, { id: 3 }, { id: 4 }]);
-//     });
-//   });
-// });

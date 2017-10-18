@@ -1,3 +1,4 @@
+import bcrypt from 'bcrypt';
 import { User } from '../models';
 
 export const listUsers = async (req, res) => {
@@ -19,12 +20,28 @@ export const listUsers = async (req, res) => {
     const items = users.map(user => ({
       id: user._id.toString(),
       name: user.name,
-      interests: user.interests,
-      location: user.location,
+      skills: user.skills,
+      city: user.city,
     }));
 
     res.json({ total, items });
   } catch (error) {
     res.status(500).send(error);
+  }
+};
+
+export const createUser = async (req, res) => {
+  const { name, email, password } = req.body;
+
+  const user = new User({ name, email });
+
+  user.passwordHash = await bcrypt.hash(password, 10);
+
+  try {
+    await user.save();
+
+    res.status(201).send();
+  } catch (err) {
+    res.status(500).send(err);
   }
 };
